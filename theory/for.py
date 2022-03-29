@@ -31,4 +31,4 @@ print("-----------")
 texto="Loncho"
 for letra in texto:
     print(f"Dame una: {letra}")
-print(f"Como dice: {texto}")
+print(f"Como dice: {texto}") 
