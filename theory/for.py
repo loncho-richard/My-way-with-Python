@@ -29,6 +29,6 @@ for clave,valor in {"Python":1,"Java":2,"Jacascript":3}.items():
 print("-----------")
 
 texto="Loncho"
-for nashei in texto:
-    print(f"Dame una: {nashei}")
+for letra in texto:
+    print(f"Dame una: {letra}")
 print(f"Como dice: {texto}")
