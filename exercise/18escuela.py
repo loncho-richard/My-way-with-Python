@@ -34,7 +34,7 @@ escuela={
     ],
     "maestros":[
         {"nombre":"Carlos","grado":"Licenciatura"},
-        {"nombre":"Maria Eugenia","grado":"Mestria"},
+        {"nombre":"Maria Eugenia","grado":"Maestria"},
         {"nombre":"Pichi","grado":"Doctorado"},
     ]
 }
