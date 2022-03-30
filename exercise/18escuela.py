@@ -46,4 +46,4 @@ print("\nMAESTROS")
 for maestro in escuela["maestros"]:
     print(f"Nombre: {maestro['nombre']} Grado: {maestro['grado']}")
 
-print(escuela)
+#print(escuela)
