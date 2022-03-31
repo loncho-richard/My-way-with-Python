@@ -1,10 +1,10 @@
 def suma(n1,n2):
     res=n1+n2
-    print(f"El resultado es {res}")
+    return float(res)
 
 def resta(n1,n2):
     res=n1-n2
-    print(f"El resultado es {res}")
+    return str(res)
 
 num1=10
 num2=5
@@ -16,13 +16,12 @@ while True:
     3.-Salir") 
     opcion=input()
     if opcion=='1':
-        suma(num1,num2)
+        res=suma(num1,num2)
+        print(f"El resultado es {res} tipo: {type(res)}")
     elif opcion=='2':
-        resta(num1,num2)
+        res=resta(num1,num2)
+        print(f"El resultado es {res} tipo: {type(res)}")
     elif opcion=='3':
         break
     else:
         print("Tarado, eleji algun numero de estas opciones")
-
-
-
