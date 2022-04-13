@@ -1,5 +1,7 @@
-import Modulos.matematicas as mate
-mate.suma(5,10)
-mate.resta(10,5)
-mate.multiplicacion(5,10)
-mate.divicion(10,5) 
+import matematicas.basicas as basicas
+import matematicas.exponentes as ex
+basicas.suma(5,10)
+basicas.resta(10,5)
+basicas.mul(5,10)
+basicas.div(10,5)
+ex.exponente(5,5)
