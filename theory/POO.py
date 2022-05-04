@@ -4,7 +4,7 @@ class Auto:
     velocidad=0
     alto="1.5"
     ancho="2.3"
-    velocidadMax="100"
+    velocidadMax=100
     #metodos
     def __init__(self,llave,color,modelo,marca):
         self.__llave=llave
@@ -36,6 +36,13 @@ class Auto:
 print(Auto.alto)
 print(Auto.ancho)
 print(Auto.velocidadMax)
+
+autito=Auto("LL123", "Rojo", "2021", "vocho")
+autito.encender("LL123")
+autito.acelera()
+autito.acelera()
+print("Endendido=",autito.encendido," Velocidad=",autito.velocidad)
+
 
 '''
 vocho1=Auto("LL123", "Blanco", "2010", "Vocho")
