@@ -3,7 +3,7 @@ class Auto:
     encendido=False
     velocidad=0
     alto="1.5"
-    ancho="2.3"
+    ancho=2.3
     velocidadMax=100
     #metodos
     def __init__(self,llave,color,modelo,marca):
@@ -29,10 +29,29 @@ class Auto:
         if self.encendido==True:
             self.encendido=False
             self.velocidad=0
+            self.corneta(True)
     #metodos privados
     def __enciendeLuzFreno(self):
         print("Luz del freno encendida")
+    @staticmethod
+    def corneta(precionar=False):
+        if precionar==True:
+            print("la corneta suena")
+        else:
+            print("la corneta no suena")
+    @classmethod
+    def canasta(cls,peso):
+        pesoMax=cls.ancho*10
+        if peso<pesoMax:
+            return True
+        else:
+            return False
+#print("La canasta del auto soporta 20KG?", Auto.canasta(20))
 
+autito=Auto("LL123", "Rojo", "2021", "vocho")
+print("La canasta del autito soporta 20KG?", autito.canasta(20))
+
+'''         
 print(Auto.alto)
 print(Auto.ancho)
 print(Auto.velocidadMax)
@@ -43,7 +62,7 @@ autito.acelera()
 autito.acelera()
 print("Endendido=",autito.encendido," Velocidad=",autito.velocidad)
 
-
+'''
 '''
 vocho1=Auto("LL123", "Blanco", "2010", "Vocho")
 vocho1.encender("LL123")
