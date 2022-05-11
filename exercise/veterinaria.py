@@ -47,6 +47,15 @@ class Mascota:
 
 
 perro1=Mascota("Tino",4,"perro")
+while True:
+    print("______________")
+    opcion=int(input("Sistema de adopcion de veterinaria:\n1- Dar una mascota en adopcion.\n2- Adoptar una mascota.\n0- Salir"))
+    if opcion==1:
+        return opcion
+    elif opcion==0:
+        break
+'''
+perro1=Mascota("Tino",4,"perro")
 perro2=Mascota("Ciro",3,"perro")
 perro3=Mascota("Choco",5,"perro")
 hamster1=Mascota("Chewi",1,"hamster")
@@ -65,3 +74,4 @@ Mascota.salida_mascota(gato1.name,gato1._type)
 Mascota.salida_mascota(perro2.name,perro2._type)
 print("---------")
 print("Perros:",databasePerro,"\nGatos:",databaseGato,"\nAves:",databaseAve,"\nHamsters:",databaseHamster)
+'''
