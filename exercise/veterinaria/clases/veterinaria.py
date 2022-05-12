@@ -1,7 +1,16 @@
+import os as os
+database={
+    "Perro":[],
+    "Gato":[],
+    "Ave":[],
+    "Hamster":[]
+}
+'''
 databasePerro=[]
 databaseGato=[]
 databaseAve=[]
 databaseHamster=[]
+'''
 class Mascota:
     def __init__(self,name,old,_type):
         self.name=name
@@ -18,13 +27,13 @@ class Mascota:
             _type: tipo de animal
         """
         if _type=="perro":
-            databasePerro.append(name)
+            database['Perro'].append(name)
         elif _type=="gato":
-            databaseGato.append(name)
+            database['Gato'].append(name)
         elif _type=="ave":
-            databaseAve.append(name)
+            database['Ave'].append(name)
         elif _type=="hamster":
-            databaseHamster.append(name)
+            database['Hamster'].append(name)
 
     @classmethod
     def salida_mascota(self,name,_type):
@@ -37,23 +46,28 @@ class Mascota:
             _type: tipo de animal
         """
         if _type=="perro":
-            databasePerro.remove(name)
+            database['Perro'].remove(name)
         elif _type=="gato":
-            databaseGato.remove(name)
+            database['Gato'].remove(name)
         elif _type=="ave":
-            databaseAve.remove(name)
+            database['Ave'].remove(name)
         elif _type=="hamster":
-            databaseHamster.remove(name)
-
-
+            database['Hamster'].remove(name)
+        
+'''
 perro1=Mascota("Tino",4,"perro")
 while True:
-    print("______________")
-    opcion=int(input("Sistema de adopcion de veterinaria:\n1- Dar una mascota en adopcion.\n2- Adoptar una mascota.\n0- Salir"))
+    #print("______________")
+    opcion=int(input("Sistema de adopcion de veterinaria:\n1- Dar una mascota en adopcion.\n2- Adoptar una mascota.\n0- Salir\n"))
     if opcion==1:
-        return opcion
+        input(Mascota(str(input("Ingresa el nombre:\n")),int(input("Ingresa la edad:\n")),str(input("Ingresa el tipo de animal:"))))
+        os.system("cls")
+    elif opcion==2:
+        Mascota.salida_mascota(input())
+        os.system("cls")
     elif opcion==0:
-        break
+        break  
+'''
 '''
 perro1=Mascota("Tino",4,"perro")
 perro2=Mascota("Ciro",3,"perro")
@@ -69,9 +83,21 @@ Mascota.entrada_mascota(gato1.name,gato1._type)
 Mascota.entrada_mascota(hamster1.name,hamster1._type)
 Mascota.entrada_mascota(ave1.name,ave1._type)
 print("---------")
-print("Perros:",databasePerro,"\nGatos:",databaseGato,"\nAves:",databaseAve,"\nHamsters:",databaseHamster)
+print("Perros:",database['Perro'],"\nGatos:",database['Gato'],"\nAves:",database['Ave'],"\nHamsters:",database['Hamster'])
 Mascota.salida_mascota(gato1.name,gato1._type)
 Mascota.salida_mascota(perro2.name,perro2._type)
 print("---------")
-print("Perros:",databasePerro,"\nGatos:",databaseGato,"\nAves:",databaseAve,"\nHamsters:",databaseHamster)
+print("Perros:",database['Perro'],"\nGatos:",database['Gato'],"\nAves:",database['Ave'],"\nHamsters:",database['Hamster'])
+
+
+perro=Mascota("poli",8,"perro")
+
+Mascota.entrada_mascota("poli","perro")
+
+print(database)
+
+Mascota.salida_mascota("poli","perro")
+
+print(database)
+
 '''
