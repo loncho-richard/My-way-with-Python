@@ -1,4 +1,4 @@
-archivo=open("..\\My-way-with-Python\\theory\\archivo\\personas.txt")
+archivo=open("..\\My-way-with-Python\\theory\\archivo\\personas.txt", encoding="utf8")
 #archivo=open("C:\\Users\\carlo\\OneDrive\\workspace\\python\\My-way-with-Python\\theory\\archivo\\personas.txt")
 lineas=archivo.readlines()
 archivo.close()
