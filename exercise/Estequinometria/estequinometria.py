@@ -4,14 +4,14 @@ Paso 2: utilizar la proporción molar para encontrar los moles del otro reactivo
 Paso 3: convertir moles de otros reactivos a masa.
 '''
 
-file=open("C:\\Users\\alfre\\OneDrive\\workspace\\My-way-with-Python\\exercise\\Estequinometria\\Datos_elementos.txt", "r")
-lineas=file.readlines()
+file = open("exercise\\Estequinometria\\archivos\\Datos_elementos.txt", "r")
+lineas = file.readlines()
 
-elementos=[]
+elementos = []
 
 for linea in lineas:
-    campo=linea.replace("\n","").split(";")
-    elemento={"n_atomico":campo[0], "elemento":campo[1], "masa_atomica":campo[2]}
+    campo = linea.replace("\n","").split(";")
+    elemento = {"n_atomico":campo[0], "elemento":campo[1], "masa_atomica":campo[2]}
     elementos.append(elemento)
 
 file.close()
@@ -32,7 +32,7 @@ def search_elements(element):
         Imprime los datos del elemento
     '''
     for elemento in elementos:
-        if element==elemento['elemento']:
+        if element == elemento['elemento']:
             return (f"-Elemento= {elemento['elemento']} -N_Ato= {elemento['n_atomico']} -Masa= {elemento['masa_atomica']}")
 
 def search_weight(element):
@@ -44,8 +44,8 @@ def search_weight(element):
         devuelve el peso del elemento
     '''
     for elemento in elementos:
-        if element==elemento['elemento']:
-            value_element=str(elemento['masa_atomica'])
+        if element == elemento['elemento']:
+            value_element = str(elemento['masa_atomica'])
             return int(value_element)
 
 def elements_weight(element,amount_element):
@@ -57,20 +57,60 @@ def elements_weight(element,amount_element):
     Return:
         devuelve el peso total en gramos 
     '''
-    value_element=search_weight(element)
-    weight=value_element*int(amount_element)
+    value_element = search_weight(element)
+    weight = value_element * int(amount_element)
     return int(weight)
 
 def sum_of_two_elements():
     '''
     suma todos los elementos en gramos
     '''
-    element1=elements_weight(str(input("Ingresa el elemento: ")), int(input("Ingresa la cantidad: ")))
-    element2=elements_weight(str(input("Ingresa el elemento: ")), int(input("Ingresa la cantidad: ")))
-    return element1+element2
+    print("-----")
+    element1 = elements_weight(str(input("Ingresa primer el elemento: ")), int(input("Ingresa la cantidad: ")))
+    print("-----")
+    element2 = elements_weight(str(input("Ingresa segundo elemento: ")), int(input("Ingresa la cantidad: ")))
+    print("-----")
+    return element1 + element2
+
+def sum_of_three_elements():
+    '''
+    suma todos los elementos en gramos
+    '''
+    print("-----")
+    element1 = elements_weight(str(input("Ingresa el primer elemento: ")), int(input("Ingresa la cantidad: ")))
+    print("-----")
+    element2 = elements_weight(str(input("Ingresa el segundo elemento: ")), int(input("Ingresa la cantidad: ")))
+    print("-----")
+    element3 = elements_weight(str(input("Ingresa el tercer elemento: ")), int(input("Ingresa la cantidad: ")))
+    print("-----")
+    return element1 + element2 + element3
+
+def sum_of_four_elements():
+    '''
+    suma todos los elementos en gramos
+    '''
+    print("-----")
+    element1 = elements_weight(str(input("Ingresa el primer elemento: ")), int(input("Ingresa la cantidad: ")))
+    print("-----")
+    element2 = elements_weight(str(input("Ingresa el segundo elemento: ")), int(input("Ingresa la cantidad: ")))
+    print("-----")
+    element3 = elements_weight(str(input("Ingresa el tercer elemento: ")), int(input("Ingresa la cantidad: ")))
+    print("-----")
+    element4 = elements_weight(str(input("Ingresa el cuerto elemento: ")), int(input("Ingresa la cantidad: ")))
+    print("-----")
+    return element1 + element2 + element3 + element4
+    
+def balance_stoichiometry(reactants):
+    print(search_weight(reactants))
 
 
-print(sum_of_two_elements())
-#read_elements()
-#print(search_weight(input("Ingresa un elemento: ")))
-#print(elements_weight(input("Ingresa un elemento: "), input("Ingresa la cantidad del elemento: ")))
+
+print(search_elements("Fe"))
+#App
+'''
+while True:
+    opcion=int(input("Menu\n\
+        1. Imprimir todos los elementos\n\
+        2. Sumar el peso de los elementos\n\
+        3. Balancear Reactivos y Productos"))
+'''
