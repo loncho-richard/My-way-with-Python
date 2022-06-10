@@ -31,4 +31,3 @@ elif com1 == False and com2 == True:
     print("te falta un arroba")
 else:
     print("no pusiste un email")
-
