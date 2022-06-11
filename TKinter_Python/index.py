@@ -3,6 +3,7 @@ from tkinter import *
 from tkinter import ttk
 import mariadb
 
+
 class Alumno:
     def __init__(self,ventana):
         self.ventana = ventana

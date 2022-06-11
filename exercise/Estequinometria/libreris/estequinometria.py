@@ -63,7 +63,7 @@ def elements_weight(element,amount_element):
 
 def sum_of_two_elements():
     '''
-    suma todos los elementos en gramos
+    suma todos los elementos en gramos (2)
     '''
     print("-----")
     element1 = elements_weight(str(input("Ingresa primer el elemento: ")), int(input("Ingresa la cantidad: ")))
@@ -74,7 +74,7 @@ def sum_of_two_elements():
 
 def sum_of_three_elements():
     '''
-    suma todos los elementos en gramos
+    suma todos los elementos en gramos (3)
     '''
     print("-----")
     element1 = elements_weight(str(input("Ingresa el primer elemento: ")), int(input("Ingresa la cantidad: ")))
@@ -87,7 +87,7 @@ def sum_of_three_elements():
 
 def sum_of_four_elements():
     '''
-    suma todos los elementos en gramos
+    suma todos los elementos en gramos (4)
     '''
     print("-----")
     element1 = elements_weight(str(input("Ingresa el primer elemento: ")), int(input("Ingresa la cantidad: ")))
@@ -99,18 +99,3 @@ def sum_of_four_elements():
     element4 = elements_weight(str(input("Ingresa el cuerto elemento: ")), int(input("Ingresa la cantidad: ")))
     print("-----")
     return element1 + element2 + element3 + element4
-    
-def balance_stoichiometry(reactants):
-    print(search_weight(reactants))
-
-
-
-print(search_elements("Fe"))
-#App
-'''
-while True:
-    opcion=int(input("Menu\n\
-        1. Imprimir todos los elementos\n\
-        2. Sumar el peso de los elementos\n\
-        3. Balancear Reactivos y Productos"))
-'''
