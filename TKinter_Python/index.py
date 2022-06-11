@@ -1,3 +1,4 @@
+from cProfile import label
 from tkinter import *
 from tkinter import ttk
 import mariadb
@@ -11,16 +12,24 @@ class Alumno:
         marco.grid(row = 0, column = 0, columnspan = 3, pady = 20)
         #Nombre
         Label(marco,text = "Nombre").grid(row = 0, column = 0)
-        Entry(marco).grid(row = 0, column = 1)
+        self.nombre = Entry(marco)
+        self.nombre.grid(row = 0, column = 1)
         #Clave
         Label(marco, text = "Clave").grid(row = 1,column = 0)
-        Entry(marco).grid(row = 1,column = 1)
+        self.clave = Entry(marco)
+        self.clave.grid(row = 1,column = 1)
         #Boton
-        ttk.Button(marco,text = "Guardar alumno").grid(row = 2,columnspan = 2,sticky = W + E)
+        ttk.Button(marco,text = "Guardar alumno", command = self.agregarRegistro).grid(row = 2,columnspan = 2,sticky = W + E)
+        #Mensaje
+        self.mensaje = Label(text = 'Iniciar', fg = 'green')
+        self.mensaje.grid(row = 3, column = 0, columnspan = 2, sticky = W + E)   
         #Tabla(tree view)
-        ttk.Treeview(self.ventana, columns = 2) 
+        self.tabla = ttk.Treeview(self.ventana, columns = 2) 
+        self.tabla.grid(row = 4, column = 0, columnspan = 2)
+        self.tabla.heading("#0", text = "nombre", anchor = CENTER)
+        self.tabla.heading("#1", text = "clave", anchor = CENTER)
 
-    def consultasAlumnos(self, query):
+    def queryAlumnos(self, query):
         try:
             conn = mariadb.connect(
                 host = "localhost",
@@ -35,10 +44,21 @@ class Alumno:
         return cur
 
     def mostrarDatos(self):
-        cur = self.consultasAlumnos("SELECT `nombre`, `clave` FROM `alumnos`")
+        registros = self.tabla.get_children()
+        for registro in registros:
+            self.tabla.delete(registro)
+        cur = self.queryAlumnos("SELECT `nombre`, `clave` FROM `alumnos`")
         for (nombre, clave) in cur:
-            print(nombre, clave)
-
+            self.tabla.insert('', 0, text = nombre, values = clave)
+    
+    def agregarRegistro(self):
+        if len(self.nombre.get())!=0 and len(self.clave.get())!=0:
+            query = "INSERT INTO `alumnos` (`id`, `nombre`, `clave`) VALUES (NULL, '"+self.nombre.get()+"', '"+self.clave.get()+"');"
+            self.queryAlumnos(query)
+            self.mensaje['text'] = "El alumno "+self.nombre.get()+"se a insertado existosamente"
+        else:
+            self.mensaje['text'] = "El nombre y la clave del alumno, no pueden estar vacias"
+        self.mostrarDatos()
 if __name__=="__main__":
     ventana=Tk()
     aplicacion=Alumno(ventana)
