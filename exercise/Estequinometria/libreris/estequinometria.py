@@ -99,3 +99,5 @@ def sum_of_four_elements():
     element4 = elements_weight(str(input("Ingresa el cuerto elemento: ")), int(input("Ingresa la cantidad: ")))
     print("-----")
     return element1 + element2 + element3 + element4
+
+elements_weight("N",4)
