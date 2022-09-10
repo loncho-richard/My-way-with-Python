@@ -32,6 +32,7 @@ porcentaje_alumnos = (cont / cant_alumnos) * 100
 print(f"El {porcentaje_alumnos}% aprobo con mas del 7.5 en el traba integrador")
 print(f"La nota mas alta de las exposiciones es {mayor_nota}")
 print(f"El total de los estudiantes que tuvieron su nota entre 4 y 7.5 es {total_estu}")
+
 '''
 
 alumnos=int(input("ingrese cantidad de alumnos: "))
@@ -61,6 +62,6 @@ for i in range(alumnos):
     if n3<7.5 and n3>4:
         totalEstudiantes = totalEstudiantes + 1
         
-print("El porcetaje de alumnos que aprobaron con mas 7.5 es ", (contador / alumnos) * 100)
+print("El porcetaje de alumnos que aprobaron con mas 7.5 es ", (contador / alumnos) * 100, "%")
 print("mayor nota de las expociciones: ", notMayor)
 print("estudiantes que obtuvieron entre 4 y 7,5 en el parcial: ", totalEstudiantes)
