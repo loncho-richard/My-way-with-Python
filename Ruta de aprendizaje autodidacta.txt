@@ -1,0 +1,17 @@
+Ruta de aprendizaje actual:
+	-Bases en Front-end:
+		Curso de HTML ➜ https://youtu.be/rbuYtrNUxg4
+		Curso de CSS ➜ https://youtu.be/W6GTDfrWjXs
+		Curso de Javascript ➜ https://youtu.be/RqQ1d1qEWlE
+
+	-Bases en Djando:
+		➜ https://www.youtube.com/watch?v=T1intZyhXDU
+
+	-Anaconda - Python Package manager (conda):
+		➜ https://www.youtube.com/watch?v=aE7qxfgubS8
+
+	-Djando CRUD co Autenticacion y Despliegue(Login, Register, Rutas, y mas):
+		➜ https://www.youtube.com/watch?v=e6PkGDH4wWA
+
+	-Curso de git(con la intencion de mejorar lo ya aprendido):
+		➜ https://www.youtube.com/watch?v=e6PkGDH4wWA
