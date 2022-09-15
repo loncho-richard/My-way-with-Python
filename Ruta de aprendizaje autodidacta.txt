@@ -13,5 +13,8 @@ Ruta de aprendizaje actual:
 	-Djando CRUD co Autenticacion y Despliegue(Login, Register, Rutas, y mas):
 		➜ https://www.youtube.com/watch?v=e6PkGDH4wWA
 
+	-Django REST Framework, Tu primer REST API mas Despliegue:
+		➜ https://www.youtube.com/watch?v=GE0Q8YNKNgs
+
 	-Curso de git(con la intencion de mejorar lo ya aprendido):
 		➜ https://www.youtube.com/watch?v=e6PkGDH4wWA
