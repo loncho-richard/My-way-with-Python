@@ -38,7 +38,7 @@ for i in range(50):
         pesoTotalMayores = pesoTotalMayores + pesoMayores
         promMayores = (pesoTotalMayores / mayores)
 
-print ("El promedio del peso de los niños es de: ", promNiño, "kg")
-print ("El promedio del peso de los Jovenes es de: ", promJoven, "kg")
-print ("El promedio del peso de los Adultos es de: ", promAdult, "kg")
-print ("El promedio del peso de los Mayores es de: ", promMayores, "kg")
+print (f"El promedio del peso de los niños es de: {promNiño} kg")
+print (f"El promedio del peso de los Jovenes es de: {promJoven}kg")
+print (f"El promedio del peso de los Adultos es de: {promAdult}kg")
+print (f"El promedio del peso de los Mayores es de: {promMayores}kg")
