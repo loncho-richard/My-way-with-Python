@@ -18,3 +18,6 @@ Ruta de aprendizaje actual:
 
 	-Curso de git(con la intencion de mejorar lo ya aprendido):
 		➜ https://www.youtube.com/watch?v=e6PkGDH4wWA
+	
+	-Curso de inteligencia artificial python:
+		➜https://www.youtube.com/watch?v=CjdusCm73p0
