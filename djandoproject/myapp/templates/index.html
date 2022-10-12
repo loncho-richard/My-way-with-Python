@@ -1,3 +1,13 @@
+{% extends 'layouts/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
 <h1>Welcome to {{ title }}</h1>
 
+<img src="{% static 'inecuacion.png' %}" alt="">
+
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam unde quae sint placeat recusandae, cumque nihil voluptates exercitationem, ratione dolorem ad minima voluptatum perferendis excepturi doloribus cum velit? Officiis, doloribus.</p>
+
+{% endblock %}
