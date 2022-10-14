@@ -10,23 +10,28 @@
     <nav>
         <ul>
             <li>
-                <a href="/">Home</a>
+                <a href="{% url 'home' %}">Home</a>
             </li>
-            <li>
-                <a href="/tasks">Tasks</a>
-            </li>
-            
             
             {% if user.is_authenticated %}
             <li>
-                <a href="/logout">LogOut</a>
+                <a href="{% url 'tasks' %}">Tasks pending...</a>
+            </li>
+            <li>
+                <a href="{% url 'tasks_completed' %}">Tasks completed</a>
+            </li>
+            <li>
+                <a href="{% url 'create_task' %}">Create task</a>
+            </li>
+            <li>
+                <a href="{% url 'logout' %}">LogOut</a>
             </li>
             {% else %}
             <li>
-                <a href="/signup">SignUp</a>
+                <a href="{% url 'signup' %}">SignUp</a>
             </li>
             <li>
-                <a href="/signin">Login</a>
+                <a href="{% url 'signin' %}">Login</a>
             </li>
             {% endif %}
 

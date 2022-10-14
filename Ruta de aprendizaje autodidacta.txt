@@ -1,10 +1,10 @@
 Ruta de aprendizaje actual:
-	-Bases en Front-end:
+	-Bases en Front-end: listo
 		Curso de HTML ➜ https://youtu.be/rbuYtrNUxg4
 		Curso de CSS ➜ https://youtu.be/W6GTDfrWjXs
 		Curso de Javascript ➜ https://youtu.be/RqQ1d1qEWlE
 
-	-Bases en Djando:
+	-Bases en Djando: listo
 		➜ https://www.youtube.com/watch?v=T1intZyhXDU
 
 	-Anaconda - Python Package manager (conda):
