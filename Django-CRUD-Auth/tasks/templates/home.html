@@ -2,7 +2,22 @@
 
 {% block content %}
 
-<h1>Home</h1>
-<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, suscipit? Temporibus minima, veniam aliquam aut perferendis officiis natus sunt accusantium recusandae dolorem illum quam earum illo mollitia, placeat pariatur nulla, laudantium cumque dolore deserunt dolorum. Commodi, molestiae neque! Dignissimos dolorem quis, atque quos nisi veritatis, perferendis iste delectus sapiente enim omnis odio sit ut illo necessitatibus officiis. Perspiciatis error facere reiciendis. Doloribus molestias dignissimos sit mollitia quas adipisci veniam nihil consequuntur iure impedit nostrum earum id ducimus deleniti error amet maiores, ab aut. Quod vitae harum deleniti? Reiciendis est quo, facere voluptatibus voluptates iusto architecto distinctio aliquid corrupti optio quod.</p>
+<main class="container py-5">
+    <section class="card card-body">
+        <h1 class="display-1">Django App</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, suscipit? Temporibus minima, veniam aliquam aut perferendis officiis natus sunt accusantium recusandae dolorem illum quam earum illo mollitia, placeat pariatur nulla, laudantium cumque dolore deserunt dolorum. Commodi, molestiae neque! Dignissimos dolorem quis, atque quos nisi veritatis, perferendis iste delectus sapiente enim omnis odio sit ut illo necessitatibus officiis. Perspiciatis error facere reiciendis. Doloribus molestias dignissimos sit mollitia quas adipisci veniam nihil consequuntur iure impedit nostrum earum id ducimus deleniti error amet maiores, ab aut. Quod vitae harum deleniti? Reiciendis est quo, facere voluptatibus voluptates iusto architecto distinctio aliquid corrupti optio quod.</p>
+
+        {% if user.is_authenticated == False %}
+        <div class="text-center">
+            <a href="/signin/" class="btn btn-primary">
+                Login
+            </a>
+            <a href="/signup/" class="btn btn-primary">
+                Sign Up
+            </a>
+        </div>
+        {% endif %}
+    </section>
+</main>
 
 {% endblock %}
